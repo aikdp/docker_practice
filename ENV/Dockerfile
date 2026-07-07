@@ -2,4 +2,4 @@ FROM almalinux:9
 ENV app="nginx" \
     tier="backend" \
     project="expense"
-CMD ["sleep", "100"]
+# CMD ["sleep", "100"]
