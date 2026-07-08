@@ -1,18 +1,18 @@
-FROM almalinux:10
-ENV app="backend" \
-    project="expense" \
-    demo="docker"
-RUN echo "This is '${project}' for k8s $demo"
-CMD ["sleep", "100"]
-
-#version ARGS
-# ARG version
-# FROM almalinux:$(version:-10)
+# FROM almalinux:10
 # ARG app="backend" \
 #     project="expense" \
 #     demo="docker"
 # RUN echo "This is '${project}' for k8s $demo"
 # CMD ["sleep", "100"]
+
+#version ARGS
+ARG version
+FROM almalinux:$(version:-10)
+ARG app="backend" \
+    project="expense" \
+    demo="docker"
+RUN echo "This is '${project}' for k8s $demo"
+CMD ["sleep", "100"]
 
 
 # ARG version
