@@ -7,7 +7,7 @@
 
 #version ARGS
 ARG version
-FROM almalinux:$(version:-10)
+FROM almalinux:$(version:-9)
 ARG app="backend" \
     project="expense" \
     demo="docker"
