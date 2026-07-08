@@ -1,10 +1,10 @@
 ARG version
-FROM almalinux:$(version: -9)
+FROM almalinux:$(version:-9)
 ARG app="backend" \
     project="expense" \
     demo="docker"
 # ENV project=$project
-RUN echo "This project is '${project}' for k8s '$demo' and vsersion is $version"
+RUN echo "This project is '${project}' for k8s '$demo'"
 CMD ["sleep", "100"]
 
 
