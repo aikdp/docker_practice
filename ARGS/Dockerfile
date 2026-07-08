@@ -1,5 +1,5 @@
 FROM almalinux:10
-ARG app="backend" \
+ENV app="backend" \
     project="expense" \
     demo="docker"
 RUN echo "This is '${project}' for k8s $demo"
