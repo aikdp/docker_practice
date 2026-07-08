@@ -3,8 +3,8 @@ FROM almalinux:${version:-9}
 ARG app="backend" \
     project="expense" \
     demo="docker"
-# ENV project=$project
-RUN echo "This project is '${project}' for k8s '$demo'"
+ENV project=$project
+RUN echo "This project is '${project}' for k8s '$demo' and version is '${version}'"
 CMD ["sleep", "100"]
 
 
